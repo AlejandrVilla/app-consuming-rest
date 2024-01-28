@@ -11,12 +11,13 @@ pipeline{
 		stage("build"){
 			steps{
 				echo "building..."
+				sh "cd ./quoter"
 				sh "mvn clean install"
 			}
 		}
 		stage("deploy"){
 			steps{
-				echo "deploying"
+				echo "deploying..."
 				sh "cd ./quoter"
 				sh "mvn spring-boot:run"
 				// sh "./quoter/mvnw spring-boot:run"
