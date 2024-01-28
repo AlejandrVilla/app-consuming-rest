@@ -11,7 +11,7 @@ pipeline{
 		stage("build"){
 			steps{
 				echo "building..."
-				sh "cd ./quoter"
+				sh "cd quoter"
 				sh "pwd"
 				sh "ls -al"
 				sh "mvn clean install"
