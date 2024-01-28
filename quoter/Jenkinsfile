@@ -15,16 +15,15 @@ pipeline{
 				dir("quoter"){
 					sh "pwd"
 					sh "ls -al"
-					sh 'mvn clean install'
+					// sh 'mvn clean install'
+					sh "./mvnw spring-boot:run"
 				}
 			}
 		}
 		stage("deploy"){
 			steps{
 				echo "deploying..."
-				sh "cd ./quoter"
-				sh "./quoter/mvn spring-boot:run"
-				// sh "./quoter/mvnw spring-boot:run"
+				sh "mvn spring-boot:run"
 			}
 		}
 	}
