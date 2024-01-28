@@ -11,7 +11,7 @@ pipeline{
 		stage("deploy"){
 			steps{
 				echo "deploying"
-				sh "./mvnw spring-boot:run"
+				sh "./quoter/mvnw spring-boot:run"
 			}
 		}
 	}
