@@ -25,11 +25,11 @@ pipeline{
 					// sh 'mvn clean install'
 					// sh "rm -r target"
 					sh "./mvnw spring-boot:run > log.txt 2>&1 &"
-                    sh "rm log.txt"
+                    // sh "rm log.txt"
 				}
                 dir("consuming-rest"){
                     sh "java -jar build/libs/consuming-rest-0.0.1-SNAPSHOT.jar > log2.txt 2>&1 &"
-                    sh "rm log2.txt"
+                    // sh "rm log2.txt"
                 }
             }
         }
