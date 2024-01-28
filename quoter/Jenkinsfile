@@ -21,16 +21,16 @@ pipeline{
 				}
 			}
 		}
-		stage("deploy"){
-			steps{
-				echo "deploying..."
-				dir("quoter"){
-					sh "pwd"
-					sh "ls -al"
-					// sh "mvn spring-boot:run"
-				}
-			}
-		}
+	// 	stage("deploy"){
+	// 		steps{
+	// 			echo "deploying..."
+	// 			dir("quoter"){
+	// 				sh "pwd"
+	// 				sh "ls -al"
+	// 				// sh "mvn spring-boot:run"
+	// 			}
+	// 		}
+	// 	}
 	}
 }
 // pipeline {
