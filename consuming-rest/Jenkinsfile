@@ -4,13 +4,18 @@ pipeline{
         stage("build"){
             steps{
                 echo "building..."
-                sh './gradlew build'
+                dir("consuming-rest"){
+                    pwd
+                    sh './gradlew build'
+                }
             }
         }
         stage("deploy"){
             steps{
                 echo "deploying..."
-                sh "java -jar build/libs/consuming-rest-0.0.1-SNAPSHOT.jar"
+                dir("consuming-rest"){
+                    sh "java -jar build/libs/consuming-rest-0.0.1-SNAPSHOT.jar"
+                }
             }
         }
     }
