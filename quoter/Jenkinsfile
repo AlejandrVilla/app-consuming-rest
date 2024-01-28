@@ -15,14 +15,14 @@ pipeline{
 				sh "cd quoter"
 				sh "pwd"
 				sh "ls -al"
-				sh "mvn clean install"
+				sh "./quoter/mvn clean install"
 			}
 		}
 		stage("deploy"){
 			steps{
 				echo "deploying..."
 				sh "cd ./quoter"
-				sh "mvn spring-boot:run"
+				sh "./quoter/mvn spring-boot:run"
 				// sh "./quoter/mvnw spring-boot:run"
 			}
 		}
