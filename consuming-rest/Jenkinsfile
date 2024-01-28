@@ -5,7 +5,7 @@ pipeline{
             steps{
                 echo "building..."
                 dir("consuming-rest"){
-                    pwd
+                    sh "pwd"
                     sh './gradlew build'
                 }
             }
