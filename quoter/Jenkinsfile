@@ -9,8 +9,10 @@ pipeline{
 			}
 		}
 		stage("deploy"){
-			echo "deploying"
-			sh "./mvnw spring-boot:run"
+			steps{
+				echo "deploying"
+				sh "./mvnw spring-boot:run"
+			}
 		}
 	}
 }
