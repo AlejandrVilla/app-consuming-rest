@@ -23,7 +23,7 @@ pipeline{
 					sh "pwd"
 					sh "ls -al"
 					// sh 'mvn clean install'
-					sh "rm -r target"
+					// sh "rm -r target"
 					sh "./mvnw spring-boot:run > log.txt 2>&1 &"
                     sh "rm log.txt"
 				}
