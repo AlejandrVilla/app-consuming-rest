@@ -8,10 +8,18 @@ pipeline{
 				// sh "spring --version"
 			}
 		}
+		stage("build"){
+			steps{
+				echo "building..."
+				sh "mvn clean install"
+			}
+		}
 		stage("deploy"){
 			steps{
 				echo "deploying"
-				sh "./quoter/mvnw spring-boot:run"
+				sh "cd ./quoter"
+				sh "mvn spring-boot:run"
+				// sh "./quoter/mvnw spring-boot:run"
 			}
 		}
 	}
