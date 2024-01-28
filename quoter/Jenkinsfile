@@ -15,8 +15,8 @@ pipeline{
 				dir("quoter"){
 					sh "pwd"
 					sh "ls -al"
-					sh 'mvn clean install'
-					// sh "./mvnw spring-boot:run"
+					// sh 'mvn clean install'
+					sh "./mvnw spring-boot:run"
 				}
 			}
 		}
@@ -26,7 +26,7 @@ pipeline{
 				dir("quoter"){
 					sh "pwd"
 					sh "ls -al"
-					sh "mvn spring-boot:run"
+					// sh "mvn spring-boot:run"
 				}
 			}
 		}
