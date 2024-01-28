@@ -12,9 +12,9 @@ pipeline{
 			steps{
 				echo "building..."
 				sh "pwd"
-				sh "cd quoter"
+				sh "cd quoter/"
 				sh "pwd"
-				sh "ls -al"
+				sh "ls -al quoter"
 				sh "./quoter/mvn clean install"
 			}
 		}
