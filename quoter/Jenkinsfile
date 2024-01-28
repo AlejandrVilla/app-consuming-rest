@@ -5,7 +5,7 @@ pipeline{
 			steps{
 				echo "version..."
 				sh "java -version"
-				sh "spring --version"
+				// sh "spring --version"
 			}
 		}
 		stage("deploy"){
